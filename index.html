@@ -5,114 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYDRUGS</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000, #353535);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+        }
+
+        .logo img {
+            height: 70px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border: 1.4px solid white;
+            border-radius: 6px;
+            padding: 8px;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        .center-image img {
+            margin-top: 46px;
+           
+            width: 800px;
+            height: auto;
+        }
+
+       .dot{
+        color: transparent;
+       }
+
+        @media (max-width: 768px) {
+
+body{
+    background-color: #1a1a1a;
+}
+
+
+            header {
+                background: rgba(53, 53, 53, 0.65);
+                border: 1px solid rgba(112, 110, 110, 0.65);
+                margin: 12px;
+                margin-bottom: 20px;
+            }
+
+
+            main {
+                background: rgba(53, 53, 53, 0.65);
+                border: 1px solid rgba(112, 110, 110, 0.65);
+                margin: 12px;
+                margin-bottom: 20px;
+            }
+
+            footer{
+                width: 100%;
+                background: rgba(53, 53, 53, 0.65);
+                border: 1px solid rgba(112, 110, 110, 0.65);
+                margin: 12px;
+                
+            }
+
+            .dot-container {
+                margin: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+
+       
+
+        .dot {
+            font-size: larger;
+            color: rgb(139, 139, 139);
+            height: 10px;
+        }
+
+            .logo img {
+                height: 50px;
+                content: url('otherlogo.png'); /* Neues Logo in der Media-Version */
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 40px; /* Größere Schriftgröße */
+                font-weight: bold;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #000;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                border: 1px solid #444;
+                padding: 20px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+            }
+        }
+
+        /* Popup styles */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background: rgba(36, 36, 36, 0.65);
+            padding: 20px;
+            border-radius: 9px;
+            border: 0.83px solid rgb(232, 229, 229);
+            text-align: center;
+            color: white;
+        }
+
+        .popup button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+
+        .popup p {
+            font-weight: bolder;
+        }
+
+        /* Blurred background */
+        .blurred {
+            filter: blur(5px);
+        }
+
+        /* Prevent interactions with blurred content */
+        .disabled {
+            pointer-events: none;
+        }
+    </style>
 </head>
-<style>
-    body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000, #353535);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-}
-
-.logo img {
-    height: 70px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    
-    border: 1.4px solid white ;
-    border-radius: 6px;
-    padding: 8px;
-}
-
-nav ul li a:hover{
-    background-color: white;
-    color: black;
-    font-weight: bolder;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-.center-image img {
-    margin-top: 36px;
-    width: 800px;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #000;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        border: 1px solid #444;
-        padding: 20px;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        font-size: 18px;
-    }
-
-
-}
-
-</style>
 <body>
     <header>
         <div class="logo">
@@ -132,13 +233,41 @@ main {
     </header>
     <main>
         <div class="center-image">
-            <img src="mydrugshome-removebg-preview.png  " alt="MYDRUGS Center Image">
+            <img src="mydrugshome-removebg-preview.png" alt="MYDRUGS Center Image">
         </div>
     </main>
+
+    <footer>
+        <div class="dot-container">
+            <div class="dot">⦿</div>
+            <div class="dot">⦿</div>
+            <div class="dot">⦿</div>
+            <div class="dot">⦿</div>
+            <div class="dot">⦿</div>
+            <div class="dot">⦿</div>
+        </div>
+    </footer>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup" id="popup">
+            <p>This is a simulation which does not have any functionality</p>
+            <button id="popup-button">Subbmit</button>
+        </div>
+    </div>
 
     <script>
         document.querySelector('.menu-icon').addEventListener('click', () => {
             document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('popup-container').style.display = 'flex';
+            }, 500);
+        });
+
+        document.getElementById('popup-button').addEventListener('click', () => {
+            document.getElementById('popup-container').style.display = 'none';
         });
     </script>
 </body>
