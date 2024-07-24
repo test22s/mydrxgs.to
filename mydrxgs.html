@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYDRUGS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000, #353535);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1.4px solid white;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cart-icon img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.products {
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.productcard {
+    border: 1.35px solid white;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 10px;
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+    background: none;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    size: smaller;
+}
+
+.productcard img {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px;
+
+}
+
+.productcard p {
+    margin: 10px 0;
+}
+
+.productcard .price {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: lightgreen;
+}
+
+.productcard .buy-btn {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: rgb(37, 36, 36);
+    color: white;
+    cursor: pointer;
+}
+
+.productcard .buy-btn:hover {
+    background-color: #fefdfd;
+    color: black;
+    font-weight: bolder;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: right 0.3s;
+    z-index: 1000;
+
+}
+
+.cart-drawer p{
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.cartbtn{
+    border: 1px solid white;
+    border-radius: 6px;
+    background: rgba(46, 46, 46, 0.418);
+    color:  white;
+    padding: 6px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border: 1px solid #444;
+        padding: 20px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .productcard {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.cartimg{
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+
+.e6{
+    height: 160px;
+    width: auto;
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="mydrugslogo.jpg" alt="MYDRUGS Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">SHOP</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">SAFETY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <img src="  cart-removebg-preview.png" alt="Cart">
+        </div>
+        <div class="menu-icon">
+            &#9776;
+        </div>
+    </header>
+    <main>
+        <div class="products">
+            <h1>Products</h1>
+            <div class="productcard">
+                <img src="e1.png" alt="Product 1">
+                <p>Product 1 Description</p>
+                <span class="price">$10.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img src="e2.png" alt="Product 2">
+                <p>Product 2 Description</p>
+                <span class="price">$20.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img src="e3.png" alt="Product 3">
+                <p>Product 3 Description</p>
+                <span class="price">$30.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img class="" src="e4.png" alt="Product 4">
+                <p>Product 4 Description</p>
+                <span class="price">$40.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img src="e5.png" alt="Produkt ">
+                <p>   </p>
+                <span class="price">$40.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img class="e6" src="e6.png" alt="Produkt ">
+                <p>   </p>
+                <span class="price">$40.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img src="e7.png" alt="Produkt ">
+                <p>   </p>
+                <span class="price">$40.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="productcard">
+                <img src="e8.png" alt="Produkt ">
+                <p>   </p>
+                <span class="price">$40.00</span>
+                <button class="buy-btn">Buy</button>
+            </div>
+        </div>
+    </main>
+    <div class="cart-drawer">
+        <h2>Shopping Cart</h2>
+        <p>✔ 1 Item selected </p>
+        <img class="cartimg" src=" e6.png ">
+        <p>220mg Starcurrency Pill</p>
+        <button class="cartbtn" >Checkout</button>
+    </div>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.logo').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        document.querySelector('.cart-icon').addEventListener('click', () => {
+            document.querySelector('.cart-drawer').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
