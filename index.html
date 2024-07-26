@@ -16,6 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         header {
@@ -31,7 +32,6 @@
 
         .logo img {
             height: 70px;
-            margin-top: 20px;
         }
 
         nav ul {
@@ -67,83 +67,116 @@
             cursor: pointer;
         }
 
-        main {
+       
+
+        @media (min-width: 1024px) {
+
+            main {
             display: flex;
             justify-content: center;
             align-items: center;
             flex: 1;
         }
 
-        @media (min-width: 1024px){
 
-        
 
-        .desktopimg {
-            margin-top: 186px;
-           
-            width: 800px;
-            height: auto;
+            .desktopimg {
+                margin-top: 185px;
+                width: 800px;
+                height: auto;
+            }
+
+            .mediaimg {
+                display: none;
+            }
         }
 
-.mediaimg{
-    display: none;
-}
+        .dot {
+            color: transparent;
+        }
 
-         }
-
-       .dot{
-        color: transparent;
-       }
-
-       .desktopimg .mediaimg{
-        display: none;
-       }
+        .desktopimg .mediaimg {
+            display: none;
+        }
 
         @media (max-width: 768px) {
 
-.mediaimg{
-    margin-top: 4px;
-    margin-bottom: 6px;
-    
-           
-            width: 790px;
-            height: auto;
-}
+            header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
 
-.desktopimg{
-    display: none;
-}
+            border: 2px solid grey;
+            border-radius: 16px;
+            padding: 12px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 32px;
+        }
 
-body{
-    background: black;
-}
 
-.popup{
-    text-align: center;
-    top: 38%;
-}
-
-         
-            .dot-container {
-                margin: 20px;
+    main {
+          
+        border: 2px solid grey;
+            border-radius: 16px;
+            padding: 12px;
+            box-sizing: border-box;
+            position: absolute;
+            margin-top: 20px;
+            width: 90%;
+            
             display: flex;
             justify-content: center;
-            gap: 36px;
-            margin-bottom: 30px;
+            align-items: center;
+            flex: 1;
         }
 
-       
-
-        .dot {
-            font-size: larger;
-            color: rgb(139, 139, 139);
-            height: 10px;
+        footer{
+            border: 2px solid grey;
+            border-radius: 16px;
+            padding: 12px;
+            box-sizing: border-box;
+            position: absolute;
+            margin-top: 20px;
+            bottom: 12px;
+            width: 90%;
         }
 
-            .logo img {
+
+
+            .logo img{
                 height: 50px;
-                content: url('otherlogo.png'); /* Neues Logo in der Media-Version */
             }
+
+            .mediaimg {
+                margin: 23px 16px;
+                width: 280px;
+                height: auto;
+            }
+
+            .desktopimg {
+                display: none;
+            }
+
+
+        
+
+            .dot-container {
+                margin: 20px;
+                display: flex;
+                justify-content: center;
+                gap: 36px;
+                margin-bottom: 20px;
+            }
+
+            .dot {
+                font-size: larger;
+                color: rgb(139, 139, 139);
+                height: 10px;
+            }
+
+          
 
             .menu-icon {
                 display: block;
@@ -152,31 +185,28 @@ body{
             }
 
             nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: rgba(0, 0, 0, 0.8);
-                position: absolute;
-                top: 70px;
-                height: 800px;
-                bottom: 0px;
-                right: 0px;
-                border: 1.4px solid #656464;
-                border-radius: 9px;
-                padding: 20px;
-            }
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border: 1px solid #444;
+        padding: 20px;
+    }
 
-            nav ul.show {
-                display: flex;
-            }
+    nav ul.show {
+        display: flex;
+    }
 
-            nav ul li {
-                margin-bottom: 10px;
-            }
+    nav ul li {
+        margin-bottom: 10px;
+    }
 
-            nav ul li a {
-                margin-top: 22px;
-                font-size: 18px;
-            }
+    nav ul li a {
+        font-size: 18px;
+    }
+
         }
 
         /* Popup styles */
@@ -248,11 +278,10 @@ body{
     </header>
     <main>
         <div class="center-image">
-            <img class="desktopimg"  src="mydrugshomedesktop.png" alt="MYDRUGS Center Image">
-            <img class="mediaimg" src="mydrugshome.png " alt="mydrugshome">
+            <img class="desktopimg" src="mydrugshomedesktop.png" alt="MYDRUGS Center Image">
+            <img class="mediaimg" src="mydrugshome-official.png" alt="mydrugshome">
         </div>
     </main>
-
     <footer>
         <div class="dot-container">
             <div class="dot">⦿</div>
@@ -267,7 +296,7 @@ body{
     <div class="popup-container" id="popup-container">
         <div class="popup" id="popup">
             <p>This is a simulation which does not have any functionality</p>
-            <button id="popup-button">Subbmit</button>
+            <button id="popup-button">Submit</button>
         </div>
     </div>
 
@@ -288,3 +317,4 @@ body{
     </script>
 </body>
 </html>
+
