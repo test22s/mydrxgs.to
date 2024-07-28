@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
+
+
+
     body {
 
         font-family: Arial, sans-serif;
@@ -140,16 +143,17 @@
     }
 
     .add-user-btn {
-        width: 100%;
+        width: 30%;
         padding: 10px;
-        background: #ce3b3b;
+        background:  none;
         color: #fff;
         border: none;
         cursor: pointer;
+        font-weight: bolder;
     }
 
     .add-user-btn:hover {
-        background: #df5753;
+        background: #4c4c4cd0;
     }
 
     .modal {
@@ -245,13 +249,29 @@
         font-weight: bold;
     }
 
+   
+
+      
+
     @media (max-width: 735px) {
+
+
+        body{
+            max-width: 600px;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
         .container {
             flex-direction: column;
         }
 
         .sidebar {
             width: 100%;
+        }
+
+        .sidebar button{
+            display: none;
         }
 
         .top-bar {
@@ -336,6 +356,7 @@
             <li>SETTINGS</li>
             <li class="active" onclick="showTab('admin')">ADMIN</li>
             <li>SUPPORT</li>
+
             <span class="decrypt">DECRYPT <span class="unlock">🔓</span></span>
             <div class="decrypttxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque, molestias aliquam ipsa totam
                 voluptatibus hic illum necessitatibus sapiente quos tempora amet laudantium quod, dicta dolorem consectetur officiis! In, pariatur.</div>
@@ -609,6 +630,7 @@
         background-color: rgba(0, 0, 0, 0.872);
         display: flex;
         justify-content: center;
+        text-align: center;
         align-items: center;
         z-index: 1000;
     }
@@ -663,9 +685,9 @@
 <div class="login-modal" id="loginModal">
 <div class="login-content">
     <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username">
+    <input type="text" id="username" value="m1000">
     <div style="position: relative;">
-        <input type="password" id="password" value="moritzundlenni">
+        <input type="password" id="password" value="m0r17zundl3nny">
         <span class="show-password" onclick="togglePasswordVisibility()">👁</span>
     </div>
     <button onclick="login()">Login</button>
@@ -690,7 +712,7 @@ function login() {
 let username = document.getElementById('username').value;
 let password = document.getElementById('password').value;
 
-if (username === 'm1000' && password === 'moritzundlenni') {
+if (username === 'm1000' && password === 'm0r17zundl3nny') {
     document.getElementById('loginModal').style.display = 'none';
     document.getElementById('mainContent').style.display = 'flex';
 } else {

@@ -61,6 +61,16 @@
             font-weight: bolder;
         }
 
+        .unpublish-btn {
+            border: 1px solid rgb(228, 77, 50);
+            border-radius: 1px;
+            background-color: rgb(228, 77, 50);
+            color: black;
+            padding: 4px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
         .menu-icon {
             display: none;
             font-size: 30px;
@@ -76,50 +86,59 @@
             flex-direction: row;
             font-weight: 800;
         }
+@media (min-width: 1024px){
 
-        @media (min-width: 1024px) {
-            .all1 {
-                display: flex;
-                margin-top: 110px;
-            }
+body{
+    height: 100vh;
+}
 
-            .content {
-                border: 2px solid grey;
-                border-radius: 9px;
-                padding: 20px;
-                margin: 20px;
-                left: 20px;
-            }
-
-            h2 {
-                font-weight: 800;
-            }
-
-            .h10 {
-                font-weight: 900;
-            }
-
-            .section-p {
-                color: #e4e4e8;
-                font-weight: 600;
-            }
-
-            .section-px {
-                font-weight: 800;
-            }
-
-            .edit-btn {
-                background: none;
-                border: 1.6px solid white;
-                border-radius: 6px;
-                color: white;
-                font-weight: bolder;
-                text-align: right;
-                padding: 7px;
-                max-height: 36px;
-                font-size: larger;
-            }
+        .all1 {
+            display: flex;
+            margin-top: 110px;
         }
+
+        .content {
+            border: 2px solid grey;
+            border-radius: 9px;
+            padding: 20px;
+            margin: 20px;
+            left: 20px;
+        }
+
+        h2 {
+            font-weight: 800;
+        }
+
+        .h10 {
+            font-weight: 900;
+        }
+
+        .section-p {
+            color: #e4e4e8;
+            font-weight: 600;
+        }
+
+        .section-px {
+            font-weight: 800;
+        }
+
+        .edit-btn {
+            background: none;
+            border: 1.6px solid white;
+            border-radius: 6px;
+            color: white;
+            font-weight: bolder;
+            text-align: right;
+            padding: 7px;
+            max-height: 36px;
+            font-size: larger;
+        }
+
+        .edit-btn, .unpublish-btn {
+            cursor: pointer;
+        }
+
+         }
 
         @media (max-width: 768px) {
             .logo img {
@@ -156,7 +175,7 @@
             }
 
             .logo {
-                margin-top: 20px;
+                margin-top: 15px;
             }
 
             header {
@@ -166,13 +185,6 @@
             .all1 {
                 display: flex;
                 flex-direction: column;
-            }
-
-            .content {
-                display: flex;
-                flex-direction: column; /* Ensures the sections stack */
-                padding: 23px;
-                max-width: 100%;
             }
 
             h2 {
@@ -212,7 +224,13 @@
         }
 
         @media (max-width: 735px) {
+            body {
+                overflow-x: hidden;
+                padding-top: 230px;
+            }
+
             .all1 {
+                margin-top: 30px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -220,7 +238,11 @@
             }
 
             .content {
-                max-width: 90%;
+                border-top: 1px solid white;
+                border-width: 100%;
+                display: flex;
+                flex-direction: column;
+                
                 margin: 10px;
                 padding: 15px;
             }
@@ -259,7 +281,7 @@
             }
 
             .logo {
-                margin-top: 20px;
+                margin-top: 15px;
             }
 
             header {
@@ -296,10 +318,17 @@
                 font-weight: bolder;
                 text-align: right;
                 padding: 7px;
+                max-width: 62px;
                 max-height: 36px;
                 font-size: larger;
-                margin-top: 200px;
+                margin-top: 20px;
             }
+
+            .unpublish-btn {
+                margin-top: 20px;
+                font-weight: bolder;
+            }
+
         }
     </style>
 </head>
@@ -333,31 +362,29 @@
                     <p class="section-p">https://svn.yggdrasilhosting.to:433</p>
                     <p class="section-p">port: 433</p>
                 </div>
-                <button class="edit-btn"><strong> EDIT </strong></button>
+                <button class="edit-btn" onclick="location.href='adminedit.html'"><strong>EDIT</strong></button>
             </div>
         </section>
         <section>
             <div class="content">
                 <div class="txt">
-                    <h2>SERVER</h2>
-                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> ONLINE</p></div>
-                    <p class="section-p">IP: 89.17.128.0</p>
-                    <p class="section-p">https://svn.yggdrasilhosting.to:433</p>
-                    <p class="section-p">port: 433</p>
+                    <h2>DOMAIN</h2>
+                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> CONNECTED</p></div>
+                    <p class="section-p">A Record: 172.27.171.106</p>
+                    <p class="section-p">AAAA Record: 2019:mr2::1</p>
+                    <p class="section-p">SSL Active</p>
                 </div>
-                <button class="edit-btn"><strong> EDIT </strong></button>
+                <button class="edit-btn" onclick="location.href='adminedit.html'"><strong>EDIT</strong></button>
             </div>
         </section>
         <section>
             <div class="content">
                 <div class="txt">
-                    <h2>SERVER</h2>
-                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> ONLINE</p></div>
-                    <p class="section-p">IP: 89.17.128.0</p>
-                    <p class="section-p">https://svn.yggdrasilhosting.to:433</p>
-                    <p class="section-p">port: 433</p>
+                    <h2>WEBSITE STATUS</h2>
+                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> PUBLISHED</p></div>
+                    <p class="section-p">Click "unpublish" to make MyDrugs.to <br> unavailable online.</p>
                 </div>
-                <button class="edit-btn"><strong> EDIT </strong></button>
+                <button class="unpublish-btn" onclick="location.href='adminedit.html'"><strong>UNPUBLISH</strong></button>
             </div>
         </section>
     </div>
