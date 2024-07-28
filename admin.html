@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYDRUGS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000, #353535);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+        }
+
+        .logo img {
+            height: 70px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border: 1.4px solid white;
+            border-radius: 6px;
+            padding: 8px;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .dotON {
+            color: rgb(5, 174, 5);
+        }
+
+        .section-pxy {
+            display: flex;
+            flex-direction: row;
+            font-weight: 800;
+        }
+
+        @media (min-width: 1024px) {
+            .all1 {
+                display: flex;
+                margin-top: 110px;
+            }
+
+            .content {
+                border: 2px solid grey;
+                border-radius: 9px;
+                padding: 20px;
+                margin: 20px;
+                left: 20px;
+            }
+
+            h2 {
+                font-weight: 800;
+            }
+
+            .h10 {
+                font-weight: 900;
+            }
+
+            .section-p {
+                color: #e4e4e8;
+                font-weight: 600;
+            }
+
+            .section-px {
+                font-weight: 800;
+            }
+
+            .edit-btn {
+                background: none;
+                border: 1.6px solid white;
+                border-radius: 6px;
+                color: white;
+                font-weight: bolder;
+                text-align: right;
+                padding: 7px;
+                max-height: 36px;
+                font-size: larger;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                height: 50px;
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 38px;
+                font-weight: bold;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                border: 1px solid #444;
+                padding: 20px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+            }
+
+            .logo {
+                margin-top: 20px;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            .all1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column; /* Ensures the sections stack */
+                padding: 23px;
+                max-width: 100%;
+            }
+
+            h2 {
+                font-weight: 800;
+            }
+
+            .h10 {
+                font-weight: 900;
+            }
+
+            .section-p {
+                font-weight: 600;
+                color: #e4e4e8;
+            }
+
+            .section-px {
+                font-weight: 800;
+            }
+
+            h1 {
+                font-size: 18px;
+                margin: 18px;
+            }
+
+            .edit-btn {
+                background: none;
+                border: 1.6px solid white;
+                border-radius: 6px;
+                color: white;
+                font-weight: bolder;
+                text-align: right;
+                padding: 7px;
+                max-height: 36px;
+                font-size: larger;
+                margin-top: 200px;
+            }
+        }
+
+        @media (max-width: 735px) {
+            .all1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .content {
+                max-width: 90%;
+                margin: 10px;
+                padding: 15px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                border: 1px solid #444;
+                padding: 20px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 38px;
+                font-weight: bold;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .logo {
+                margin-top: 20px;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            h2 {
+                font-weight: 800;
+            }
+
+            .h10 {
+                font-weight: 900;
+            }
+
+            .section-p {
+                font-weight: 600;
+                color: #e4e4e8;
+            }
+
+            .section-px {
+                font-weight: 800;
+            }
+
+            h1 {
+                font-size: 18px;
+                margin: 18px;
+            }
+
+            .edit-btn {
+                background: none;
+                border: 1.6px solid white;
+                border-radius: 6px;
+                color: white;
+                font-weight: bolder;
+                text-align: right;
+                padding: 7px;
+                max-height: 36px;
+                font-size: larger;
+                margin-top: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="mydrugslogo.jpg" alt="MYDRUGS Logo">
+        </div>
+        <h1><div class="h10">MYDRUGS</div>ADMIN PANEL</h1>
+        <nav>
+            <ul>
+                <li><a href="mydrxgs.html">SHOP</a></li>
+                <li><a href="adminedit.html">CONTROL</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">SAFETY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            &#9776;
+        </div>
+    </header>
+
+    <div class="all1">
+        <section>
+            <div class="content">
+                <div class="txt">
+                    <h2>SERVER</h2>
+                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> ONLINE</p></div>
+                    <p class="section-p">IP: 89.17.128.0</p>
+                    <p class="section-p">https://svn.yggdrasilhosting.to:433</p>
+                    <p class="section-p">port: 433</p>
+                </div>
+                <button class="edit-btn"><strong> EDIT </strong></button>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <div class="txt">
+                    <h2>SERVER</h2>
+                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> ONLINE</p></div>
+                    <p class="section-p">IP: 89.17.128.0</p>
+                    <p class="section-p">https://svn.yggdrasilhosting.to:433</p>
+                    <p class="section-p">port: 433</p>
+                </div>
+                <button class="edit-btn"><strong> EDIT </strong></button>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <div class="txt">
+                    <h2>SERVER</h2>
+                    <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> ONLINE</p></div>
+                    <p class="section-p">IP: 89.17.128.0</p>
+                    <p class="section-p">https://svn.yggdrasilhosting.to:433</p>
+                    <p class="section-p">port: 433</p>
+                </div>
+                <button class="edit-btn"><strong> EDIT </strong></button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('popup-container').style.display = 'flex';
+            }, 500);
+        });
+
+        document.getElementById('popup-button').addEventListener('click', () => {
+            document.getElementById('popup-container').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
