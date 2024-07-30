@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         header {
@@ -62,13 +62,13 @@
         }
 
         .unpublish-btn {
-            border: 1px solid rgb(228, 77, 50);
+            border: none;
             border-radius: 1px;
-            background-color: rgb(228, 77, 50);
+            background-color: rgb(227, 69, 38);
             color: black;
             padding: 4px;
             font-size: larger;
-            font-weight: bolder;
+            font-weight: 800;
         }
 
         .menu-icon {
@@ -90,6 +90,7 @@
 
 body{
     height: 100vh;
+    overflow: hidden;
 }
 
         .all1 {
@@ -133,6 +134,12 @@ body{
             max-height: 36px;
             font-size: larger;
         }
+
+        .edit-btn:hover{
+            background-color: rgba(126, 124, 124, 0.434);
+        }
+
+        
 
         .edit-btn, .unpublish-btn {
             cursor: pointer;
@@ -205,8 +212,8 @@ body{
             }
 
             h1 {
-                font-size: 18px;
-                margin: 18px;
+                font-size: 20px;
+                margin: 16px;
             }
 
             .edit-btn {
@@ -226,7 +233,7 @@ body{
         @media (max-width: 735px) {
             body {
                 overflow-x: hidden;
-                padding-top: 230px;
+                padding-top: 260px;
             }
 
             .all1 {
@@ -384,7 +391,7 @@ body{
                     <div class="section-pxy"><p class="section-px"><div class="dotON">⦿</div> PUBLISHED</p></div>
                     <p class="section-p">Click "unpublish" to make MyDrugs.to <br> unavailable online.</p>
                 </div>
-                <button class="unpublish-btn" onclick="location.href='adminedit.html'"><strong>UNPUBLISH</strong></button>
+                <button class="unpublish-btn" onclick="location.href='adminedit.html'">UNPUBLISH</button>
             </div>
         </section>
     </div>

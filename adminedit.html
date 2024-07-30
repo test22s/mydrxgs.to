@@ -96,15 +96,17 @@
     }
 
     .tabs button {
-        background: #3e3c6b8e;
+        background: #3d3c528e;
         color: #fff;
-        border: 1px solid #3e3c6b8e;
+        border: 1px solid #3d3c528e;
         border-radius: 2px;
         padding: 10px;
         cursor: pointer;
         margin-right: 10px;
         font-weight: bolder;
     }
+
+   
 
     .tabs button:hover,
     .tabs button.active {
@@ -262,12 +264,22 @@
             overflow-x: hidden;
         }
 
+        .main-content{
+            max-width: 600px;
+        }
+
+        .tab-content{
+            max-width: 600px;
+            font-size: auto;
+        }
+
         .container {
             flex-direction: column;
+            max-width: 90%;
         }
 
         .sidebar {
-            width: 100%;
+            display: none;
         }
 
         .sidebar button{
@@ -289,6 +301,8 @@
 
         .tabs button {
             margin-bottom: 10px;
+            border: 1.3px solid white;
+            border-radius: 4px;
         }
     }
 
@@ -364,12 +378,13 @@
     </div>
     <div class="main-content">
         <div class="top-bar">
-            <span class="title">Administrators</span>
+            <span class="title">Admin Panel</span>
         </div>
         <div class="tabs">
-            <button onclick="showTab('admin')">Administrators</button>
+           
             <button onclick="showTab('configuration')">Configuration</button>
-            <button onclick="showTab('proxy')">Proxy Settings</button>
+            <button class="active" onclick="showTab('admin')">Administrators</button>
+            <button class="proxy" onclick="showTab('proxy')">Proxy Settings</button>
             <button onclick="showTab('ftp')">FTP</button>
             <button onclick="showTab('editor')">File Editor</button>
         </div>
@@ -393,7 +408,7 @@
                         <td>******</td>
                         <td>aODaJr...</td>
                         <td>#00001</td>
-                        <td><button class="edit-btn" onclick="editPermissions('BigL')">Permissions</button></td>
+                        <td><button class="edit-btn" onclick="editPermissions('BigL')">Edit Permissions</button></td>
                     </tr>
                     <tr>
                         <td>M1000</td>
@@ -424,32 +439,32 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Server1</td>
-                        <td>192.168.1.1</td>
+                        <td>Server #001</td>
+                        <td>24.239.244.95</td>
                         <td> <div class="dotON">⦿</div> Online</td>
                         <td><button class="edit-btn" onclick="toggleServer('Server1')">Toggle</button></td>
                     </tr>
                     <tr>
-                        <td>Server1</td>
-                        <td>192.168.1.1</td>
+                        <td>Server #002</td>
+                        <td>235.207.214.41</td>
                         <td> <div class="dotON">⦿</div> Online</td>
                         <td><button class="edit-btn" onclick="toggleServer('Server1')">Toggle</button></td>
                     </tr>
                     <tr>
-                        <td>Server1</td>
-                        <td>192.168.1.1</td>
+                        <td>Server #003</td>
+                        <td>175.123.204.22</td>
                         <td> <div class="dotON">⦿</div> Online</td>
                         <td><button class="edit-btn" onclick="toggleServer('Server1')">Toggle</button></td>
                     </tr>
                     <tr>
-                        <td>Server1</td>
-                        <td>192.168.1.1</td>
+                        <td>Server #004</td>
+                        <td>182.198.11.76</td>
                         <td> <div class="dotON">⦿</div> Online</td>
                         <td><button class="edit-btn" onclick="toggleServer('Server1')">Toggle</button></td>
                     </tr>
                     <tr>
-                        <td>Server2</td>
-                        <td>192.168.1.2</td>
+                        <td>Server #005</td>
+                        <td>62.188.16.25</td>
                         <td> <div class="dotOFF">⦿</div> Offline</td>
                         <td><button class="edit-btn" onclick="toggleServer('Server2')">Toggle</button></td>
                     </tr>
@@ -471,34 +486,34 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Proxy1</td>
-                        <td>10.10.1.1</td>
+                        <td>Proxy#1</td>
+                        <td>10.54.5.1</td>
                         <td>8080</td>
-                        <td> <td> <div class="dotON">⦿</div> Connected</td> Active</td>
+                        <td> <div class="dotON">⦿</div> Active</td>
                     </tr>
                     <tr>
-                        <td>Proxy2</td>
-                        <td>10.10.1.2</td>
+                        <td>Proxy#2</td>
+                        <td>25.11.1.2</td>
                         <td>8081</td>
-                        <td><td> <div class="dotOFF">⦿</div> Connected</td>  Inactive</td>
+                        <td> <div class="dotOFF">⦿</div>  Inactive</td>
                     </tr>
                     <tr>
-                        <td>Proxy1</td>
-                        <td>10.10.1.1</td>
-                        <td>8080</td>
-                        <td> <td> <div class="dotON">⦿</div> Connected</td> Active</td>
+                        <td>Proxy#3</td>
+                        <td>67.17.9.2</td>
+                        <td>8085</td>
+                        <td>  <div class="dotON">⦿</div>  Active</td>
                     </tr>
                     <tr>
-                        <td>Proxy1</td>
-                        <td>10.10.1.1</td>
-                        <td>8080</td>
-                        <td> <td> <div class="dotON">⦿</div> Connected</td> Active</td>
+                        <td>Proxy#4</td>
+                        <td>13.77.1.1</td>
+                        <td>8880</td>
+                        <td> <div class="dotON">⦿</div> Active</td>
                     </tr>
                     <tr>
-                        <td>Proxy1</td>
-                        <td>10.10.1.1</td>
-                        <td>8080</td>
-                        <td> <td> <div class="dotOFF">⦿</div> Disconnected</td> Inactive</td>
+                        <td>Proxy#5</td>
+                        <td>16.10.2.1</td>
+                        <td>8484</td>
+                        <td>  <div class="dotOFF">⦿</div>Inactive</td>
                     </tr>
                     </tbody>
                 </table>
@@ -519,16 +534,52 @@
                     <tbody>
                     <tr>
                         <td>FTP1</td>
-                        <td>user1</td>
+                        <td>user#13627</td>
                         <td>******</td>
                         <td> <div class="dotON">⦿</div> Connected</td>
                     </tr>
                     <tr>
-                        <td>FTP2</td>
-                        <td>user2</td>
-                        <td>******</td>
-                        <td><td> <div class="dotOFF">⦿</div> Connected</td>  Disconnected</td>
+                    <td>FTP2</td>
+                    <td>user#78122</td>
+                    <td>*********</td>
+                    <td> <div class="dotON">⦿</div> Connected</td>
                     </tr>
+                    <tr>
+                        <td>FTP3</td>
+                        <td>user#67362</td>
+                        <td>*****</td>
+                        <td> <div class="dotOFF">⦿</div>  Disconnected</td>
+                    </tr>
+                        <tr>
+                        <td>FTP4</td>
+                        <td>user#96232</td>
+                        <td>****</td>
+                        <td> <div class="dotON">⦿</div> Connected</td>
+                </tr>
+                    <tr>
+                        <td>FTP5</td>
+                    <td>user#74310</td>
+                    <td>*******</td>
+                    <td> <div class="dotON">⦿</div> Connected</td>
+                </tr>
+                    <tr>
+                    <td>FTP6</td>
+                    <td>user#11215</td>
+                    <td>******</td>
+                    <td> <div class="dotON">⦿</div> Connected</td>
+                </tr>
+                    <tr>
+                        <td>FTP7</td>
+                    <td>user#55278</td>
+                    <td>*********</td>
+                    <td> <div class="dotON">⦿</div> Connected</td>
+                </tr>
+                    <tr>
+                        <td>FTP8</td>
+                    <td>user#90511</td>
+                    <td>*****</td>
+                    <td> <div class="dotON">⦿</div> Connected</td>
+                </tr>
                     </tbody>
                 </table>
             </div>
@@ -546,14 +597,34 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>config.txt</td>
-                        <td>/etc/config.txt</td>
-                        <td>2024-07-28</td>
+                        <td>bestellungen.txt</td>
+                        <td>mydrugs/Kunden/Bestellungen.xlsx</td>
+                        <td>2019-07-28</td>
+                    </tr>
+                    <tr>
+                        <td>important.txt</td>
+                        <td>mydrugs/admin/importantstuff.txt</td>
+                        <td>2019-07-27</td>
+                    </tr>
+                    <tr>
+                        <td>logins.txt</td>
+                        <td>mydrugs/admin/wichtige_logins.txt</td>
+                        <td>2019-07-27</td>
+                    </tr>
+                    <tr>
+                        <td>keys.png</td>
+                        <td>mydrugs/admin/pgpkeys.txt</td>
+                        <td>2019-07-27</td>
+                    </tr>
+                    <tr>
+                        <td>data.jpg</td>
+                        <td>mydrugs/Pictures/shop/mdma1.jpg</td>
+                        <td>2019-07-27</td>
                     </tr>
                     <tr>
                         <td>data.json</td>
-                        <td>/var/data.json</td>
-                        <td>2024-07-27</td>
+                        <td>mydrugs/Pictures/shop/mda_stone.jpg</td>
+                        <td>2019-07-27</td>
                     </tr>
                     </tbody>
                 </table>

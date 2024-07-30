@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristische Instagram-Seite</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #0d0d0d, #1a1a1a);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            background: #3b3b3b79;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 1s;
+        }
+
+        .container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 20px;
+            backface-visibility: hidden;
+        }
+
+        .card p{
+            font-size: larger;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .card .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a1a;
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+        }
+
+        .button {
+            position: absolute;
+            bottom: 20px;
+            padding: 10px 20px;
+            background: none;
+            border: 2px solid white;
+            border-radius: 6px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transform: translateZ(50px);
+            transition: transform 0.5s;
+        }
+
+        .button:hover {
+            transform: translateZ(100px);
+        }
+
+        .button:active {
+            transform: translateZ(70px);
+        }
+
+        .button a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @keyframes background-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            background: linear-gradient(270deg, #000000, #232323, #3b3b3b);
+            background-size: 600% 600%;
+            animation: background-animation 15s ease infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img   class="insta-img" src=" instagram-3d-icon-removebg-preview.png " alt="Instagram Image">
+          <p>  @mydrugs.netflix </p>
+            <div class="back">
+                <img class="md-ad" src="">
+            </div>
+        </div>
+    </div>
+    <button class="button">
+        <a href="https://www.instagram.com/dein_account" target="_blank">Zur Instagram-Seite</a>
+    </button>
+</body>
+</html>
