@@ -84,8 +84,9 @@ h1 {
 }
 
 .productcard {
-    border: 1.35px solid white;
+    border: 2.2px solid white;
     border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(160, 159, 159, 0.5);
     padding: 14px;
     margin: 10px;
     width: 22%;
@@ -111,18 +112,21 @@ h1 {
 .productcard .price {
     display: block;
     margin: 10px 0;
-    font-size: 18px;
-    color: lightgreen;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 5px 10px rgba(236, 235, 235, 0.5);
 }
 
 .productcard .buy-btn {
-    padding:  4px 23px;
-    border: 1px solid rgb(196, 40, 29);
+    padding:  3.4px 23px;
+    border: none;
     border-radius: 21px;
-    background: linear-gradient(to bottom, rgb(218, 75, 35), rgb(196, 40, 29));
+    background: rgb(237, 72, 27);
     color: white;
     cursor: pointer;
 }
+
 
 .productcard .buy-btn:hover {
     background-color: #fefdfd;
@@ -146,16 +150,29 @@ h1 {
 }
 
 .cart-drawer p{
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 6px;
     padding: 6px;
 }
 
+.productcard p{
+    font-weight: 800;
+    text-shadow: 0 5px 10px rgba(236, 235, 235, 0.5);
+    font-size: 22px;
+}
+
+.info{
+    color: rgb(212, 211, 211);
+    
+    font-weight: bolder;
+    font-size: smaller;
+}
+
 .cartbtn{
-    border: 1px solid white;
+    border: none;
     border-radius: 6px;
-    background: rgba(46, 46, 46, 0.418);
-    color:  white;
+    background: rgb(235, 234, 234);
+    color:  black;
     padding: 6px;
     font-weight: bolder;
     font-size: larger;
@@ -246,50 +263,58 @@ h1 {
             <h1>Products</h1>
             <div class="productcard">
                 <img src="e1.png" alt="Product 1">
-                <p>Blue Bunny 170mg</p>
-                <span class="price">$10.00</span>
+                <p>BLUE BUNNY </p>
+                <div class="info">75mg containing each pill</div>
+                <span class="price"> 0.00034 BTC / 0.00745 ETH </span>
                 <button class="buy-btn">0.00034₿</button>
             </div>
             <div class="productcard">
                 <img src="e2.png" alt="Product 2">
-                <p>Green Simlie 120mg</p>
-                <span class="price">$20.00</span>
+                <p>GREEN SMILIE</p>
+                <div class="info">100mg containing each pill</div>
+                <span class="price">0.00026 BTC / 0.00812 ETH</span>
                 <button class="buy-btn">0.00026₿</button>
             </div>
             <div class="productcard">
                 <img src="e3.png" alt="Product 3">
-                <p>Yellwo Currency 200mg</p>
-                <span class="price">$30.00</span>
+                <p>YELLOW CURRENCY</p>
+                <div class="info">90mg containing each pill</div>
+                <span class="price">0.000344 BTC / 0.00752 ETH</span>
                 <button class="buy-btn">0.00044₿</button>
             </div>
             <div class="productcard">
                 <img class="" src="e4.png" alt="Product 4">
-                <p> Red Hand 110mg</p>
-                <span class="price">$40.00</span>
+                <p> RED STOP HAND</p>
+                <div class="info">110mg containing each pill</div>
+                <span class="price">0.00028 BTC / 0.00643 ETH</span>
                 <button class="buy-btn">0.00028₿</button>
             </div>
             <div class="productcard">
                 <img src="e5.png" alt="Produkt ">
-                <p> Blue Punsisher 190mg  </p>
-                <span class="price">$40.00</span>
+                <p> BLUE PUNISHER </p>
+                <div class="info">190mg containing each pill</div>
+                <span class="price">0.000119 BTC / 0.00932 ETH</span>
                 <button class="buy-btn">0.000119₿</button>
             </div>
             <div class="productcard">
                 <img class="e6" src="e6.png" alt="Produkt ">
-                <p> Purple Flower 70mg  </p>
-                <span class="price">$40.00</span>
+                <p> PURPLE FLOWER </p>
+                <div class="info">70mg containing each pill</div>
+                <span class="price">0.00033 BTC / 0.00754 ETH</span>
                 <button class="buy-btn">0.00033₿</button>
             </div>
             <div class="productcard">
                 <img src="e7.png" alt="Produkt ">
-                <p> Yellow King 60mg  </p>
-                <span class="price">$40.00</span>
+                <p> YELLOW KING</p>
+                <div class="info">60mg containing each pill</div>
+                <span class="price">0.00021 BTC / 0.0091 ETH</span>
                 <button class="buy-btn">0.00021₿</button>
             </div>
             <div class="productcard">
                 <img src="e8.png" alt="Produkt ">
-                <p>  Pink Death 220mg </p>
-                <span class="price">$40.00</span>
+                <p>  PINK DEATH </p>
+                <div class="info">220mg containing each pill</div>
+                <span class="price">0.00014 BTC / 0.00932 ETH</span>
                 <button class="buy-btn">0.00014₿</button>
             </div>
         </div>

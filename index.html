@@ -129,7 +129,7 @@
             align-items: center;
             width: 90%;
             
-            border: 1.7px solid rgb(180, 179, 179);
+           
             border-radius: 16px;
             padding: 12px;
             box-sizing: border-box;
@@ -139,16 +139,17 @@
 
         header main footer{
             background-color: none;
+            border: none;
         }
 
         body{
-            background: linear-gradient(to bottom, #000, #313131);
+            background: linear-gradient(to bottom, #000, #191919);
         }
 
 
     main {
           
-        border: 1.7px solid rgb(180, 179, 179);
+        
             border-radius: 16px;
             padding: 12px;
             box-sizing: border-box;
@@ -163,7 +164,7 @@
         }
 
         footer{
-            border: 1.7px solid rgb(180, 179, 179);
+            
             border-radius: 16px;
             padding: 12px;
             box-sizing: border-box;
@@ -181,9 +182,9 @@
 
             .mediaimg {
                 margin: 23px 16px;
-                width: 280px;
+                width: 300px;
                 height: auto;
-                filter: contrast(124%);
+                filter: contrast(110%);
             }
 
             .desktopimg {
@@ -203,7 +204,7 @@
 
             .dot {
                 font-size: larger;
-                color: rgb(139, 139, 139);
+                color: rgb(166, 166, 166);
                 height: 10px;
             }
 
@@ -266,6 +267,10 @@ nav{
             max-width: 90%;
         }
        
+        .menubtns{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
         .menuBtn {
             padding: 10px 10px;
@@ -363,10 +368,10 @@ nav{
         }
 
         .popup {
-            background: rgba(36, 36, 36, 0.65);
+            background: rgba(22, 22, 22, 0.75);
             padding: 20px;
             border-radius: 9px;
-            border: 0.83px solid rgb(232, 229, 229);
+            border: 0.83px solid rgb(207, 206, 206);
             text-align: center;
             color: white;
         }
@@ -378,7 +383,7 @@ nav{
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            background-color: white;
+            background-color: rgb(228, 227, 227);
             color: black;
             font-weight: bold;
         }
@@ -418,11 +423,13 @@ nav{
             <div class="close-btn-set">
             <span class="close-btn" id="closeBtn">&times;</span>
         </div>
+        <div class="menubtns">
             <a class="menuBtn" href="#" data-target="index.html"><strong> HOME </strong></a>
             <a class="menuBtn" href="#" data-target="mydrxgs.html"> <strong>   SHOP  </strong> </a>
-            <a class="menuBtn" href="#" data-target="contact.html"> <strong> FAQ </strong> </a>
+            <a class="menuBtn" href="#" data-target="faq.html"> <strong> FAQ </strong> </a>
             <a class="menuBtn" href="#" data-target="index.html"> <strong>   SAFETY </strong> </a>
-            <a class="menuBtn" href="#" data-target="index.html"> <strong>  CONTACT </strong> </a>
+            <a class="menuBtn" href="#" data-target="contact.html"> <strong>  CONTACT </strong> </a>
+        </div>
             <div class="menu-bottom">
             <div class="menutxt">LOGED IN AS <br> <strong class="menutxt1" >ADMINSTRATOR_2</strong> </div>
             <a class="menuBtn" class="panelbtn" href="#" data-target="admin.html"> <strong>ADMIN PANEL </strong></a>
@@ -458,7 +465,7 @@ nav{
 
     <div class="popup-container" id="popup-container">
         <div class="popup" id="popup">
-            <p>This is a simulation which does not have any functionality</p>
+            <p>This Website is a simulation of Mydrugs.to (Netflix Seriies) <br> which does not have any functionality and does not sell or promote any iligal drugs</p>
             <button id="popup-button">Submit</button>
         </div>
     </div>
